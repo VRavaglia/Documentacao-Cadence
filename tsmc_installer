@@ -1,0 +1,15 @@
+#Opções de processos para instalação
+#export PDKNAME=pdk_mimcap1fF_proc1P6M_4X1N
+export PDKNAME=pdk_mimcap2fF_proc1P6M_4X1N
+#export PDKNAME=pdk_mimcap3DMIM_proc1P6M_4X1N
+
+cp /cds/Opus/user/bin/custom-env.default-IC618 .
+cp /cds/Opus/user/TSMC018/$PDKNAME/.tsmcPDKEnv .
+cp /cds/Opus/user/TSMC018/$PDKNAME/font.map .
+cp /cds/Opus/user/TSMC018/$PDKNAME/ReleaseNote.txt .
+cp /cds/Opus/user/TSMC018/$PDKNAME/techfile . 
+cp /cds/Opus/user/TSMC018/$PDKNAME/virtuoso_018um_v212b_pre091916.map .
+cp /cds/Opus/user/TSMC018/cds.lib .
+cp /cds/Opus/user/TSMC018/lib.defs .
+cp /cds/Opus/user/TSMC018/.cdsinit .
+ln -s /cds/Opus/user/TSMC018/$PDKNAME/tsmc18/libInit.il libInit.il
