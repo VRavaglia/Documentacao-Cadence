@@ -1,0 +1,186 @@
+#
+# Script para configuração dos pacotes do Cadence e do AMS-Kit (e outros kits)
+#
+# Por : Rafael Jorge Csura Szendrodi <szendro@pads.ufrj.br>
+# Em  : 12/08/2011
+#
+# Ultima atualizacao:
+# Por : Rafael Jorge Csura Szendrodi <szendro@pads.ufrj.br>
+# Em  : 24/06/2020
+#
+# Este arquivo deverá ser carregado da seguinte forma:
+#
+# source custom-env.default-IC618
+#
+# ou
+#
+# . custom-env.default-IC618
+#
+# ou ainda incorporado ao arquivo .bashrc da tua conta!
+#
+# Para carrega-lo de uma versão customizada no diretório local, digite:
+#
+# source ./custom-env.default-IC618
+#
+# Este arquivo NÃO deve ser incorporado em scripts de shell!  
+#
+
+# Caso necessite desabilitar as versão 64 bits de todos oi pacotes do IC Tools.
+# Muito útil no caso de se usar versões anteriores à 6.14, como a 5.141.
+#export WANT_CADENCE_64=no
+
+# Versão mais nova do Cadence, IC Tools versão 6.18
+export IC_CADENCE_VERSION=618
+#export IC_CADENCE_VERSION=617
+#export IC_CADENCE_VERSION=615
+#
+# Obrigatorio para uso no Slackware 14.2
+CDS_SLACKWARE_COMPAT=1
+export CDS_SLACKWARE_COMPAT
+W3264_NO_HOST_CHECK=1
+export W3264_NO_HOST_CHECK
+#
+#
+# ATENÇÃO! A execução correta do IC Tools versão 5.141 não é mais suportada e/ou
+# garantida!
+# USE POR TUA PRÓPRIA CONTA E RISCO!!!
+#export IC_CADENCE_VERSION=5141
+#
+#
+# Hit-Kit AMS-4.10 0.35nm, só funciona no IC615 ou superior!
+export AMS_VERSION=410
+# Hit-Kit AMS-4.00 0.35nm, só funciona no IC615!
+#export AMS_VERSION=400
+#
+# Hit-Kit AMS-4.11 0.18nm, só funciona no IC615 ou superior!
+#export AMS_VERSION=411
+# Hit-Kit AMS-4.01 0.18nm, só funciona no IC615!
+#export AMS_VERSION=401
+#
+# Para desabilitar o AMS Design Kit:
+#export AMS_VERSION=no
+#
+#
+# ATENÇÃO! A execução correta do AMS Design Kit versões 3.70 e 3.78 não é mais
+# suportada e/ou garantida!
+# USE POR TUA PRÓPRIA CONTA E RISCO!!!
+#
+# Hit-Kit AMS-3.80 0.35nm, só funciona no IC5141!
+#export AMS_VERSION=380
+#
+# Hit-Kit AMS-3.70 0.35nm, só funciona no IC5141!
+#export AMS_VERSION=370
+#
+# Hit-Kit AMS-3.78 0.18nm, só funciona no IC5141!
+#export AMS_VERSION=378
+#
+#
+#
+# Design Kits da UMC versões .65nm, .90nm, .130nm e .180nm!
+# Se for usar, é recomendável comentar (desabilitar) os Design Kits da AMS!
+# Escolha APENAS UM entres os quatro Design Kits abaixo!
+#
+# Para desabilitar o UMC Design Kit:
+export UMC_VERSION=no
+#
+# Os dois Design Kits abaixo só funcionam no CADENCE 5.141
+# Escolha APENAS UM entres os três Design Kits para esta versão do CADENCE!
+#export UMC_VERSION=65
+#export UMC_VERSION=130-Logic
+#export UMC_VERSION=130-RFCMOS
+#
+# Os Design Kits abaixo funcionam no CADENCE 5.141 e no CADENCE 6.1x
+# Escolha APENAS UM entres os dois Design Kits para estas versões do CADENCE!
+#export UMC_VERSION=90
+#export UMC_VERSION=180
+#
+#
+# Design Kit IBM Mosis 180
+#export MOSIS_VERSION=180
+#
+# Para desabilitar o IBM MOSIS Design Kit:
+#export MOSIS_VERSION=no
+#
+#
+export SPB_VERSION=163
+#export SPB_VERSION=165
+export EXT_VERSION=191
+#export EXT_VERSION=91
+#export EXT_VERSION=101
+#export EXT_VERSION=152
+export ASSURA_VERSION=41
+export PAS_VERSION=31
+# ATENCAO: As ferramentas MMSIM e SPECTRE sao mutuamente exclusivas!
+export MMSIM_VERSION=no
+#export MMSIM_VERSION=72
+#export MMSIM_VERSION=101
+#export MMSIM_VERSION=111
+#export MMSIM_VERSION=121
+export SPECTRE_VERSION=191
+#export SPECTRE_VERSION=181
+export ANLS_VERSION=62
+#export ANLS_VERSION=71
+export ETS_VERSION=91
+#export ETS_VERSION=101
+#export ETS_VERSION=111
+export PACIFIC_VERSION=61
+export EDI_VERSION=91
+#export EDI_VERSION=101
+#export ET_VERSION=91
+#export ET_VERSION=101
+#export ET_VERSION=111
+#export ET_VERSION=151
+#export CONFRML_VERSION=91
+#export CONFRML_VERSION=101
+#export CONFRML_VERSION=111
+#export CONFRML_VERSION=151
+export CONFRML_VERSION=162
+export PVS_VERSION=191
+#export PVS_VERSION=161
+#export PVS_VERSION=151
+export RC_VERSION=91
+#export RC_VERSION=101
+#export RC_VERSION=111
+#export INNOVUS_VERSION=161
+export INNOVUS_VERSION=162
+#export GENUS_VERSION=161
+#export GENUS_VERSION=162
+export GENUS_VERSION=191
+#export MODUS_VERSION=161
+export MODUS_VERSION=162
+# INCISIV já inclui os pacotes IES, EMGR, IFV e IUS
+#export INCISIV_VERSION=92
+#export INCISIV_VERSION=102
+#export INCISIV_VERSION=111
+export INCISIV_VERSION=152
+#export INCISIV_VERSION=no
+# IES já inclui os pacotes EMGR, IFV e IUS
+#export IES_VERSION=82
+export IES_VERSION=no
+export EMGR_VERSION=82
+export IFV_VERSION=82
+export IUS_VERSION=82
+export UVCAMBA_VERSION=25
+export UVCUSB_VERSION=26
+export UVCPCIE_VERSION=23
+export UVCPCI_VERSION=22
+export UVCETH_VERSION=22
+export VIPP_VERSION=92-uvm
+#export VIPP_VERSION=92-ovm
+export CICE_VERSION=42
+
+source /cds/Opus/user/bin/cadence-env
+
+# Para modificar as chamadas do KIT da AMS, descomente as linhas unalias e alias
+# dos respectivos comandos e modifique a linha alias do mesmo!
+#
+#unalias ams0.8bi
+#unalias ams0.35c
+#unalias ams0.35s
+#unalias ams0.35h
+#
+#alias ams0.8bi="ams_cds -tech byq -mode fb -quiet -newtech &"
+#alias ams0.35c="ams_cds -tech c35b4 -mode fb -quiet -newtech &"
+#alias ams0.35s="ams_cds -tech s35d4 -mode fb -quiet -newtech &"
+#alias ams0.35h="ams_cds -tech h35b4 -mode fb -quiet -newtech &"
+

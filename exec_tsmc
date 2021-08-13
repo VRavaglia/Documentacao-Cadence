@@ -1,5 +1,4 @@
 #execution
-export PDKNAME=pdk_mimcap2fF_proc1P6M_4X1N
 source custom-env.default-IC618
 export CDSHOME=/cds/Opus/user/IC618
 virtuoso &
